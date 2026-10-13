@@ -1,0 +1,15 @@
+{
+  "id": "./",
+  "name": "Project Ayu-Vision — Rural Healthcare Response",
+  "short_name": "Ayu-Vision",
+  "description": "AI-assisted triage, emergency SOS and daily health records for rural healthcare support.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f5f8f6",
+  "theme_color": "#123b33",
+  "lang": "en-IN",
+  "icons": [
+    { "src": "./icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

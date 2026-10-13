@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Ayu-Vision mark">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#103d34"/>
+      <stop offset="1" stop-color="#147d69"/>
+    </linearGradient>
+    <linearGradient id="iris" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8be0bd"/>
+      <stop offset="1" stop-color="#37b4a3"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="30" fill="url(#bg)"/>
+  <path d="M17 64C31 43 47 32 64 32s33 11 47 32C97 85 81 96 64 96S31 85 17 64Z" fill="none" stroke="#f7fffa" stroke-width="6" stroke-linejoin="round"/>
+  <circle cx="64" cy="64" r="22" fill="url(#iris)" stroke="#f7fffa" stroke-width="4"/>
+  <path d="M60 47h8v13h13v8H68v13h-8V68H47v-8h13z" fill="#103d34"/>
+  <path d="M89 20c10 0 17 4 21 12-12 4-22 1-28-8 2-2 4-4 7-4Z" fill="#a8e9bd"/>
+  <path d="M25 28c-7 8-7 17-2 26 10-7 13-17 6-26Z" fill="#6ed3aa"/>
+</svg>

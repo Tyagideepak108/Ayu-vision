@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#123b33" />
+  <meta name="description" content="Project Ayu-Vision is a rural healthcare triage, emergency SOS and daily health-records prototype built for low-connectivity communities." />
+  <link rel="manifest" href="./manifest.json" />
+  <link rel="icon" href="./icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="./styles.css" />
+  <title>Project Ayu-Vision | Rural Healthcare Response</title>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#home" aria-label="Project Ayu-Vision home">
+        <span class="brand-mark"><img src="./icon.svg" alt="" /></span>
+        <span><strong>Project <em>Ayu-Vision</em></strong><small>RURAL HEALTH RESPONSE</small></span>
+      </a>
+      <div class="side-label">CARE WORKSPACE</div>
+      <nav class="side-nav" aria-label="Main navigation">
+        <button class="nav-item active" data-view="home"><span class="nav-icon">⌂</span>Overview</button>
+        <button class="nav-item" data-view="scan"><span class="nav-icon">◉</span>AI Scan <span class="nav-tag">DEMO</span></button>
+        <button class="nav-item" data-view="emergency"><span class="nav-icon">✚</span>Emergency SOS</button>
+        <button class="nav-item" data-view="daily"><span class="nav-icon">▥</span>Daily checkup</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="offline-panel"><span class="status-dot"></span><div><strong>Offline-ready shell</strong><small>Core screens cached on device</small></div></div>
+        <p class="sidebar-note">Prototype only. Not a substitute for a trained health professional or emergency services.</p>
+      </div>
+    </aside>
+
+    <div class="main-column">
+      <header class="topbar">
+        <div class="crumb"><span class="crumb-dot"></span><span id="topContext">Community health workspace</span></div>
+        <div class="top-actions">
+          <span class="offline-chip"><span class="status-dot"></span><span id="connectionLabel">Checking network</span></span>
+          <select id="languageSelect" class="language-select" aria-label="Select language"><option value="en">EN / English</option><option value="hi">HI / हिन्दी</option></select>
+          <div class="avatar" title="Team Code Breaker demo profile">CB</div>
+        </div>
+      </header>
+
+      <main id="viewRoot" tabindex="-1">
+        <section class="view active" id="view-home" aria-labelledby="homeTitle">
+          <div class="welcome-row">
+            <div>
+              <p class="eyebrow" data-i18n="overviewEyebrow">PROJECT AYU-VISION · RURAL HEALTHCARE</p>
+              <h1 id="homeTitle" data-i18n="homeTitle">Care closer. Response faster.</h1>
+              <p class="muted lead" data-i18n="homeLead">AI-assisted triage, emergency SOS and daily health records—connected in one practical prototype for rural communities.</p>
+            </div>
+            <div class="date-pill"><span>◷</span><span id="todayLabel">Today</span></div>
+          </div>
+
+          <section class="hero-banner">
+            <div class="hero-copy">
+              <div class="hero-kicker"><span class="pulse-dot"></span><span data-i18n="heroKicker">A COMMUNITY-FIRST HEALTH PLATFORM</span></div>
+              <h2 data-i18n="heroTitle">When every minute matters, make the next step clear.</h2>
+              <p data-i18n="heroText">Screening support when symptoms are unclear. Guided first-aid when action is urgent. Health trends for the next check-in.</p>
+              <div class="hero-actions"><button class="btn btn-light" data-go="emergency"><span>✚</span><span data-i18n="openEmergency">Open emergency help</span></button><a class="hero-call" href="tel:112">Call 112 <span>↗</span></a></div>
+              <small class="hero-footnote">112 is India's unified emergency number. Use the phone call option for immediate help.</small>
+            </div>
+            <div class="hero-art" aria-hidden="true">
+              <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+              <div class="health-cross"><img src="./icon.svg" alt="" /></div>
+              <div class="art-card art-card-top"><span class="art-icon">⌁</span><span><b>Daily health records</b><small>Stored in this browser</small></span></div>
+              <div class="art-card art-card-bottom"><span class="art-icon art-icon-red">↗</span><span><b>Escalation workflow</b><small>Primary → backup alert</small></span></div>
+            </div>
+          </section>
+
+          <div class="section-heading"><div><p class="eyebrow">THE AYU-VISION ECOSYSTEM</p><h2 data-i18n="chooseAction">Three modules. One connected response.</h2></div><span class="section-hint">Select a module to explore <span>→</span></span></div>
+          <div class="module-grid">
+            <button class="module-card scan-card" data-go="scan">
+              <span class="module-symbol symbol-violet">◎</span><span class="module-count">MODULE 01 / ASSESS</span>
+              <h3 data-i18n="scanTitle">AI Scan</h3><p data-i18n="scanDesc">Capture a photo or short audio sample to walk through the screening demo.</p>
+              <span class="module-footer"><span>Open scanner</span><span class="arrow-circle">↗</span></span>
+            </button>
+            <button class="module-card emergency-card" data-go="emergency">
+              <span class="module-symbol symbol-coral">SOS</span><span class="module-count">MODULE 02 / RESPOND</span>
+              <h3 data-i18n="emergencyTitle">Emergency SOS</h3><p data-i18n="emergencyDesc">Choose an emergency, view safe first-aid steps, and prepare a location message.</p>
+              <span class="module-footer"><span>Get urgent help</span><span class="arrow-circle">↗</span></span>
+            </button>
+            <button class="module-card records-card" data-go="daily">
+              <span class="module-symbol symbol-green">↗</span><span class="module-count">MODULE 03 / TRACK</span>
+              <h3 data-i18n="dailyTitle">Daily Wellness & EHR</h3><p data-i18n="dailyDesc">Record vital signs, review trends and make a useful summary for the next health-worker visit.</p>
+              <span class="module-footer"><span>View health log</span><span class="arrow-circle">↗</span></span>
+            </button>
+          </div>
+
+          <section class="usp-board" aria-labelledby="uspTitle">
+            <div class="usp-heading">
+              <div>
+                <p class="eyebrow">THE MASTER USP · WORKFLOW DEMONSTRATION</p>
+                <h2 id="uspTitle">Autonomous Escalation Matrix</h2>
+                <p>Designed so an unanswered primary alert has a clear next step.</p>
+              </div>
+              <button class="btn btn-light usp-launch" data-go="emergency">Run live demo <span>↗</span></button>
+            </div>
+            <div class="usp-steps">
+              <div class="usp-step"><span class="usp-step-num">01</span><div><b>Alert primary CHC</b><small>Prepare the SOS for the government health centre.</small></div></div>
+              <span class="usp-arrow">→</span>
+              <div class="usp-step"><span class="usp-step-num">02</span><div><b>Wait for acknowledgement</b><small>Intended policy: 5 minutes · demo timer: 10 seconds.</small></div></div>
+              <span class="usp-arrow">→</span>
+              <div class="usp-step"><span class="usp-step-num">03</span><div><b>Escalate to backup</b><small>Prepare an alert for a verified backup responder.</small></div></div>
+            </div>
+            <p class="usp-disclaimer">Prototype simulation only: no hospital is contacted automatically, and response is not guaranteed.</p>
+          </section>
+
+          <div class="bottom-grid">
+            <section class="panel quick-panel"><div class="panel-heading"><div><p class="eyebrow">QUICK ACCESS</p><h3>Emergency guide</h3></div><button class="text-button" data-go="emergency">View all ↗</button></div>
+              <div class="quick-list">
+                <button data-emergency="snake"><span class="quick-emoji">🐍</span><span><b>Snakebite</b><small>Immobilise • reach care fast</small></span><span class="quick-chevron">›</span></button>
+                <button data-emergency="burn"><span class="quick-emoji">🔥</span><span><b>Burn</b><small>Cool safely • assess severity</small></span><span class="quick-chevron">›</span></button>
+                <button data-emergency="maternity"><span class="quick-emoji">♡</span><span><b>Maternity</b><small>Urgent assessment pathway</small></span><span class="quick-chevron">›</span></button>
+                <button data-emergency="breathing"><span class="quick-emoji">♥</span><span><b>Breathing / chest pain</b><small>Call for emergency help</small></span><span class="quick-chevron">›</span></button>
+              </div>
+            </section>
+            <section class="panel snapshot-panel"><div class="panel-heading"><div><p class="eyebrow">PERSONAL HEALTH LOG</p><h3>Latest check-in</h3></div><span class="tiny-icon">▥</span></div>
+              <div id="latestSnapshot" class="snapshot-empty"><span class="empty-icon">＋</span><div><b>No readings yet</b><p>Add a checkup to start a private, on-device trend.</p></div></div>
+              <button class="btn btn-outline full-btn" data-go="daily">Add today's reading <span>→</span></button>
+            </section>
+          </div>
+          <footer class="app-footer"><span>PROJECT AYU-VISION · HACKATHON PROTOTYPE</span><span>Team Code Breaker · FGIET</span><span>Team Lead: Deepak Tyagi</span><span>Not for clinical diagnosis</span></footer>
+        </section>
+
+        <section class="view" id="view-scan" aria-labelledby="scanPageTitle">
+          <div class="page-heading"><div><button class="back-link" data-go="home">← Overview</button><p class="eyebrow">MODULE 01 / ASSESS</p><h1 id="scanPageTitle">AI Scan <span class="demo-badge">DEMO MODE</span></h1><p class="muted lead">A guided capture flow to demonstrate future visual and audio screening.</p></div><div class="page-icon page-icon-violet">◉</div></div>
+          <div class="notice notice-warning"><span class="notice-icon">!</span><div><b>Screening model is not connected.</b><p>This prototype does not diagnose disease or classify audio. Never delay urgent medical care for an app result.</p></div></div>
+          <div class="scan-layout">
+            <section class="panel scan-workspace"><div class="tab-switch" role="tablist"><button class="tab-button active" data-scan-tab="image" role="tab" aria-selected="true">▧ Visual scan</button><button class="tab-button" data-scan-tab="audio" role="tab" aria-selected="false">♫ Audio sample</button></div>
+              <div id="scanImagePanel" class="scan-tab-panel active">
+                <div class="upload-stage" id="uploadStage"><div class="upload-icon">▧</div><h3>Capture or upload an image</h3><p>Eye, skin or mouth image · JPG, PNG, WEBP</p><label for="imageInput" class="btn btn-dark">Choose image <span>↗</span></label><input id="imageInput" type="file" accept="image/*" capture="environment" hidden /><img id="imagePreview" alt="Selected image preview" hidden /></div>
+                <div class="capture-notes"><span>ⓘ</span><p>Demo privacy: the selected image is previewed in this tab only and is not uploaded to a server.</p></div>
+                <button class="btn btn-primary full-btn" id="analyzeImageBtn" disabled>Run demo screening <span>→</span></button>
+                <div id="imageAnalysisResult" class="analysis-result" hidden></div>
+              </div>
+              <div id="scanAudioPanel" class="scan-tab-panel" hidden>
+                <div class="audio-stage"><div class="audio-rings"><span>♫</span></div><h3>Record a short sample</h3><p>Tap record, then speak or record a cough for up to 5 seconds.</p><div class="record-state" id="recordState"><span class="status-dot"></span><span>Microphone is idle</span></div><button class="btn btn-dark" id="recordAudioBtn">● Start 5-second recording</button><audio id="audioPreview" controls hidden></audio></div>
+                <div class="capture-notes"><span>ⓘ</span><p>Audio stays in this session. No TB, asthma, heart attack or breathing diagnosis is generated by this prototype.</p></div>
+                <div id="audioAnalysisResult" class="analysis-result" hidden></div>
+              </div>
+            </section>
+            <aside class="panel scan-side"><p class="eyebrow">HOW THIS WILL WORK</p><h3>Human-led, AI-assisted</h3><div class="process-list"><div><span>1</span><section><b>Capture</b><p>Collect a usable image or short sample with consent.</p></section></div><div><span>2</span><section><b>Quality check</b><p>Detect blur, lighting and missing input before any model runs.</p></section></div><div><span>3</span><section><b>Review next step</b><p>Show a cautious screening signal and advise a trained professional.</p></section></div></div><div class="mini-safety"><span>⚕</span><p><b>Urgent symptoms?</b><br />Open Emergency SOS or call 112. Do not wait for a scan.</p></div></aside>
+          </div>
+        </section>
+
+        <section class="view" id="view-emergency" aria-labelledby="emergencyPageTitle">
+          <div class="page-heading"><div><button class="back-link" data-go="home">← Overview</button><p class="eyebrow">MODULE 02 / RESPOND</p><h1 id="emergencyPageTitle">Emergency SOS</h1><p class="muted lead">Choose a situation for first-aid guidance and prepare a location-aware alert.</p></div><a class="call-emergency" href="tel:112"><span>☎</span><span><small>INDIA EMERGENCY</small><b>Call 112</b></span><span class="call-arrow">↗</span></a></div>
+          <div class="notice notice-danger"><span class="notice-icon">!</span><div><b>Life-threatening emergency? Call 112 now.</b><p>This web prototype does not dispatch an ambulance or notify hospitals automatically.</p></div></div>
+          <div class="emergency-layout">
+            <section class="panel emergency-selector"><div class="panel-heading"><div><p class="eyebrow">SELECT INCIDENT</p><h3>What happened?</h3></div><span class="red-count">4 TYPES</span></div>
+              <div class="emergency-options">
+                <button class="emergency-option selected" data-emergency="snake"><span class="emergency-emoji">🐍</span><span><b>Snakebite</b><small>Suspected snake bite</small></span><span class="option-radio"></span></button>
+                <button class="emergency-option" data-emergency="burn"><span class="emergency-emoji">🔥</span><span><b>Burn</b><small>Thermal burn or scald</small></span><span class="option-radio"></span></button>
+                <button class="emergency-option" data-emergency="maternity"><span class="emergency-emoji">🤰</span><span><b>Maternity emergency</b><small>Labour, bleeding or severe symptoms</small></span><span class="option-radio"></span></button>
+                <button class="emergency-option" data-emergency="breathing"><span class="emergency-emoji">♥</span><span><b>Breathing / chest pain</b><small>Severe breathlessness or chest pain</small></span><span class="option-radio"></span></button>
+              </div>
+              <div class="selected-emergency" id="firstAidContent"></div>
+            </section>
+            <aside class="panel sos-panel"><div class="panel-heading"><div><p class="eyebrow">SOS MESSAGE BUILDER</p><h3>Prepare an alert</h3></div><span class="sos-symbol">↗</span></div>
+              <label class="field-label" for="patientLabel">Patient / caller name (optional)</label><input class="text-input" id="patientLabel" placeholder="e.g. Rani Devi" maxlength="70" />
+              <label class="field-label" for="primaryNumber">Primary responder phone</label><input class="text-input" id="primaryNumber" type="tel" inputmode="tel" placeholder="Enter a number to text" />
+              <label class="field-label" for="backupNumber">Backup responder phone</label><input class="text-input" id="backupNumber" type="tel" inputmode="tel" placeholder="Enter backup number (optional)" />
+              <div class="location-box"><div class="location-heading"><span class="location-pin">⌖</span><div><b>Incident location</b><small id="locationText">Location not retrieved yet</small></div></div><div class="location-actions"><button class="btn btn-outline btn-small" id="getLocationBtn">Get GPS location</button><button class="btn btn-soft btn-small" id="useDemoLocationBtn">Use demo location</button></div><p class="micro-note">Live GPS needs permission and HTTPS/localhost. Demo coordinates are clearly labelled as sample data.</p></div>
+              <button class="btn btn-primary full-btn" id="openSmsBtn">Prepare primary SMS <span>↗</span></button>
+              <div id="smsPreview" class="sms-preview" hidden><div class="sms-preview-head"><div><p class="eyebrow">MESSAGE PREVIEW · NOT SENT</p><b id="smsDraftRecipient">Recipient not selected</b></div><span class="sms-preview-icon">✉</span></div><pre id="smsDraftText"></pre><button class="btn btn-dark full-btn" id="openSmsComposerBtn">Open messaging app <span>↗</span></button><p class="micro-note">Review the details and send from your messaging app. This browser does not send SMS automatically.</p></div>
+              <a class="btn btn-outline full-btn call-112-inline" href="tel:112">☎ Call emergency services (112)</a>
+              <div class="escalation-box"><div class="escalation-top"><span class="escalation-icon">⇧</span><div><b>Escalation matrix</b><small>Interactive demo • 10-second timer</small></div></div><p>If no acknowledgement arrives, the prototype will show a backup escalation prompt. No real hospital is contacted by this timer.</p><button class="btn btn-dark full-btn" id="startEscalationBtn">Run no-response scenario <span>→</span></button><button class="btn btn-outline full-btn" id="simulateAckBtn">Simulate CHC acknowledgement</button><div class="escalation-progress" id="escalationProgress" hidden><span id="escalationProgressFill"></span></div><div id="escalationState" class="escalation-state" aria-live="polite" hidden></div><button class="btn btn-outline full-btn" id="openBackupSmsBtn" hidden>Prepare backup SMS <span>↗</span></button></div>
+              <p class="micro-note bottom-note">SMS is opened as a draft. Check the recipient and tap Send yourself. The web app cannot silently send a text or guarantee delivery.</p>
+            </aside>
+          </div>
+        </section>
+
+        <section class="view" id="view-daily" aria-labelledby="dailyPageTitle">
+          <div class="page-heading"><div><button class="back-link" data-go="home">← Overview</button><p class="eyebrow">MODULE 03 / TRACK</p><h1 id="dailyPageTitle">Daily Checkup</h1><p class="muted lead">A lightweight health log designed for local use and ASHA-worker review.</p></div><div class="page-icon page-icon-green">▥</div></div>
+          <div class="notice notice-info"><span class="notice-icon">⌂</span><div><b>Private by default in this prototype.</b><p>Entries are saved in this browser on this device only. There is no cloud backup or health-worker sharing yet.</p></div></div>
+          <div class="daily-layout">
+            <section class="panel entry-panel"><div class="panel-heading"><div><p class="eyebrow">NEW READING</p><h3>Record today's checkup</h3></div><span class="tiny-icon">＋</span></div>
+              <form id="checkupForm">
+                <div class="form-grid"><div class="form-field"><label for="systolic">Systolic BP <small>mmHg</small></label><input id="systolic" type="number" min="50" max="260" placeholder="e.g. 120" /></div><div class="form-field"><label for="diastolic">Diastolic BP <small>mmHg</small></label><input id="diastolic" type="number" min="30" max="180" placeholder="e.g. 80" /></div><div class="form-field"><label for="pulse">Pulse <small>bpm</small></label><input id="pulse" type="number" min="20" max="240" placeholder="e.g. 72" /></div><div class="form-field"><label for="temperature">Temperature <small>°C</small></label><input id="temperature" type="number" min="30" max="45" step="0.1" placeholder="e.g. 36.8" /></div><div class="form-field"><label for="spo2">SpO₂ <small>% (if available)</small></label><input id="spo2" type="number" min="50" max="100" placeholder="e.g. 98" /></div><div class="form-field"><label for="respiratoryRate">Breathing rate <small>/min</small></label><input id="respiratoryRate" type="number" min="4" max="80" placeholder="e.g. 16" /></div></div>
+                <div class="form-field notes-field"><label for="symptoms">Symptoms / notes <small>optional</small></label><textarea id="symptoms" rows="3" maxlength="500" placeholder="Headache, dizziness, medicine taken…"></textarea></div>
+                <div class="form-form-actions"><button type="submit" class="btn btn-primary">Save checkup <span>→</span></button><button type="button" class="text-button" id="clearFormBtn">Clear fields</button></div>
+                <p class="form-hint">Enter readings measured with an appropriate device. Camera-based breathing or vital-sign estimates are not implemented in this prototype.</p>
+              </form>
+            </section>
+            <section class="panel trends-panel"><div class="panel-heading"><div><p class="eyebrow">LOCAL TREND</p><h3>Blood pressure history</h3></div><button class="text-button" id="loadSampleBtn">Load sample data</button></div>
+              <div class="chart-legend"><span><i class="legend-dot legend-sys"></i>Systolic</span><span><i class="legend-dot legend-dia"></i>Diastolic</span></div>
+              <div class="chart-wrap"><svg id="bpChart" viewBox="0 0 520 230" role="img" aria-label="Blood pressure trend chart"><text x="260" y="110" text-anchor="middle" fill="#7e8984" font-size="14">Add readings to see your trend</text></svg></div>
+              <div class="trend-summary" id="trendSummary"><div><small>READINGS SAVED</small><b>0</b></div><div><small>LAST ENTRY</small><b>—</b></div><div><small>STORAGE</small><b>On device</b></div></div>
+              <div class="records-header"><h4>Recent entries</h4><div class="record-actions"><button class="text-button" id="exportRecordsBtn">Export CSV</button><button class="text-button danger-text" id="deleteRecordsBtn">Clear history</button></div></div><div class="records-list" id="recordsList"><div class="empty-records">Your saved readings will appear here.</div></div>
+            </section>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="./app.js" defer></script>
+</body>
+</html>
